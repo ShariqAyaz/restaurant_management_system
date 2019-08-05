@@ -1,0 +1,7 @@
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\bin\Debug\rdgrant.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\bin\Debug\rdgrant.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\bin\Debug\AppLogic.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\bin\Debug\AppLogic.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\obj\Debug\rdgrant.csprojResolveAssemblyReference.cache
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\obj\Debug\rdgrant.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\obj\Debug\rdgrant.pdb

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Accounts_Transactions/VendorPay.aspx">
+      <publishTime>08/02/2019 00:09:24</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>05/07/2019 23:27:46</publishTime>
+    </File>
+    <File Include="apps/applaunch.aspx">
+      <publishTime>05/27/2019 00:41:24</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.css">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.css.map">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.min.css">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap-theme.min.css.map">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.css">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.css.map">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.min.css">
+      <publishTime>07/31/2019 23:19:05</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.min.css.map">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/css/jquery-ui.css">
+      <publishTime>06/09/2019 02:18:01</publishTime>
+    </File>
+    <File Include="assets/css/Lato-Bold.ttf">
+      <publishTime>10/05/2019 15:55:10</publishTime>
+    </File>
+    <File Include="assets/css/Lato-Hairline.ttf">
+      <publishTime>10/05/2019 15:55:10</publishTime>
+    </File>
+    <File Include="assets/css/Lato-Regular.ttf">
+      <publishTime>10/05/2019 15:55:10</publishTime>
+    </File>
+    <File Include="assets/css/Lato-Thin.ttf">
+      <publishTime>10/05/2019 15:55:10</publishTime>
+    </File>
+    <File Include="assets/css/style.css">
+      <publishTime>06/20/2019 23:20:51</publishTime>
+    </File>
+    <File Include="assets/css/style2.css">
+      <publishTime>05/24/2019 01:44:33</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/25/2016 13:43:02</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/25/2016 13:43:02</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/25/2016 13:43:02</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/25/2016 13:43:02</publishTime>
+    </File>
+    <File Include="assets/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/25/2016 13:43:02</publishTime>
+    </File>
+    <File Include="assets/img/logo.jpg">
+      <publishTime>05/17/2019 00:18:37</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap.js">
+      <publishTime>07/25/2016 15:53:28</publishTime>
+    </File>
+    <File Include="assets/js/bootstrap.min.js">
+      <publishTime>07/25/2016 15:53:30</publishTime>
+    </File>
+    <File Include="assets/js/jquery-3.4.1.js">
+      <publishTime>03/06/2019 19:16:54</publishTime>
+    </File>
+    <File Include="assets/js/jquery-3.4.1.slim.min.js">
+      <publishTime>05/11/2019 00:47:02</publishTime>
+    </File>
+    <File Include="assets/js/jquery-ui.js">
+      <publishTime>05/11/2019 00:46:43</publishTime>
+    </File>
+    <File Include="assets/js/npm.js">
+      <publishTime>07/25/2016 15:53:30</publishTime>
+    </File>
+    <File Include="bentity_selection.aspx">
+      <publishTime>06/20/2019 23:13:57</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>05/07/2019 23:27:46</publishTime>
+    </File>
+    <File Include="bin/AppLogic.dll">
+      <publishTime>07/29/2019 12:19:50</publishTime>
+    </File>
+    <File Include="bin/AppLogic.pdb">
+      <publishTime>07/29/2019 12:19:50</publishTime>
+    </File>
+    <File Include="bin/ESIT-ERP.dll">
+      <publishTime>08/03/2019 07:15:18</publishTime>
+    </File>
+    <File Include="bin/ESIT-ERP.pdb">
+      <publishTime>08/03/2019 07:15:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>07/12/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>10/03/2016 14:26:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>10/03/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>09/03/2016 12:00:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>10/03/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>10/03/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>09/03/2016 11:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 14:06:24</publishTime>
+    </File>
+    <File Include="bin/Numerator.dll">
+      <publishTime>07/29/2019 12:19:50</publishTime>
+    </File>
+    <File Include="bin/Numerator.pdb">
+      <publishTime>07/29/2019 12:19:50</publishTime>
+    </File>
+    <File Include="bin/postproceed.dll">
+      <publishTime>08/03/2019 07:15:14</publishTime>
+    </File>
+    <File Include="bin/postproceed.pdb">
+      <publishTime>08/03/2019 07:15:14</publishTime>
+    </File>
+    <File Include="bin/rdgrant.dll">
+      <publishTime>07/29/2019 12:19:51</publishTime>
+    </File>
+    <File Include="bin/rdgrant.pdb">
+      <publishTime>07/29/2019 12:19:51</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/19/2015 08:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/19/2015 08:19:46</publishTime>
+    </File>
+    <File Include="bin/transactions.dll">
+      <publishTime>07/29/2019 12:19:53</publishTime>
+    </File>
+    <File Include="bin/transactions.pdb">
+      <publishTime>07/29/2019 12:19:53</publishTime>
+    </File>
+    <File Include="default.aspx">
+      <publishTime>03/06/2019 17:39:11</publishTime>
+    </File>
+    <File Include="getItemDesc.asmx">
+      <publishTime>06/19/2019 11:34:19</publishTime>
+    </File>
+    <File Include="imports.html">
+      <publishTime>05/14/2019 23:19:16</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>03/06/2019 17:39:17</publishTime>
+    </File>
+    <File Include="Master/department/department.aspx">
+      <publishTime>01/06/2019 23:32:27</publishTime>
+    </File>
+    <File Include="Master/department/dept_cat.aspx">
+      <publishTime>05/27/2019 00:41:25</publishTime>
+    </File>
+    <File Include="Master/item/item.aspx">
+      <publishTime>02/06/2019 00:04:45</publishTime>
+    </File>
+    <File Include="Master/item/item_cat.aspx">
+      <publishTime>08/03/2019 03:52:02</publishTime>
+    </File>
+    <File Include="Master/item/item_subcat.aspx">
+      <publishTime>05/27/2019 00:41:25</publishTime>
+    </File>
+    <File Include="Master/item/uom.aspx">
+      <publishTime>05/27/2019 00:41:25</publishTime>
+    </File>
+    <File Include="Master/supplier/supplier.aspx">
+      <publishTime>05/20/2019 22:15:53</publishTime>
+    </File>
+    <File Include="Master/vendor/vendor.aspx">
+      <publishTime>05/27/2019 00:41:25</publishTime>
+    </File>
+    <File Include="Master/warehousing/warehouse.aspx">
+      <publishTime>01/06/2019 22:55:24</publishTime>
+    </File>
+    <File Include="Master/warehousing/wh_cat.aspx">
+      <publishTime>08/03/2019 02:55:14</publishTime>
+    </File>
+    <File Include="Master/warehousing/wh_location.aspx">
+      <publishTime>01/06/2019 17:45:28</publishTime>
+    </File>
+    <File Include="Master/warehousing/wh_type.aspx">
+      <publishTime>05/27/2019 00:41:25</publishTime>
+    </File>
+    <File Include="Master/wh_cat.aspx">
+      <publishTime>05/16/2019 05:51:56</publishTime>
+    </File>
+    <File Include="Material Management/wh_cat.aspx">
+      <publishTime>05/16/2019 05:51:56</publishTime>
+    </File>
+    <File Include="Material_Management/wh_cat.aspx">
+      <publishTime>05/16/2019 22:52:50</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/07/2019 23:27:48</publishTime>
+    </File>
+    <File Include="Production/BOM/BOM.aspx">
+      <publishTime>08/01/2019 02:53:43</publishTime>
+    </File>
+    <File Include="Production/BOM/ViewBOM.aspx">
+      <publishTime>08/03/2019 06:20:07</publishTime>
+    </File>
+    <File Include="Production/MM/GRN/grn_det.aspx">
+      <publishTime>06/24/2019 17:36:37</publishTime>
+    </File>
+    <File Include="Production/MM/GRN/grn_exp_post.aspx">
+      <publishTime>06/24/2019 20:40:34</publishTime>
+    </File>
+    <File Include="Production/MM/GRN/grn_main.aspx">
+      <publishTime>06/24/2019 21:37:47</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.js">
+      <publishTime>05/07/2019 23:27:48</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>05/07/2019 23:27:48</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.js">
+      <publishTime>05/11/2019 01:19:55</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.min.js">
+      <publishTime>05/11/2019 01:19:55</publishTime>
+    </File>
+    <File Include="scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>05/11/2019 01:19:55</publishTime>
+    </File>
+    <File Include="scripts/jquery-ui.js">
+      <publishTime>05/11/2019 01:19:55</publishTime>
+    </File>
+    <File Include="scripts/npm.js">
+      <publishTime>05/11/2019 01:19:55</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/28/2019 16:50:34</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

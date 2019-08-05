@@ -1,0 +1,7 @@
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\bin\Debug\postproceed.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\bin\Debug\postproceed.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\bin\Debug\AppLogic.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\bin\Debug\AppLogic.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\obj\Debug\postproceed.csprojResolveAssemblyReference.cache
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\obj\Debug\postproceed.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\obj\Debug\postproceed.pdb
