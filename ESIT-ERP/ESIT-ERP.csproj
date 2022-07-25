@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Desktop\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -76,6 +80,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -142,8 +150,34 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="OCCOTOPOS3_RESDataSet.xsc">
+      <DependentUpon>OCCOTOPOS3_RESDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="OCCOTOPOS3DataSet.xsc">
+      <DependentUpon>OCCOTOPOS3DataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="OCCOTOPOS3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OCCOTOPOS3DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="OCCOTOPOS3DataSet.xss">
+      <DependentUpon>OCCOTOPOS3DataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="OCCOTOPOS3_RESDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OCCOTOPOS3_RESDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="OCCOTOPOS3_RESDataSet.xss">
+      <DependentUpon>OCCOTOPOS3_RESDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\ESIT-ERP.pubxml" />
     <None Include="Properties\PublishProfiles\FFSERVER.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,9 +188,22 @@
   <ItemGroup>
     <Content Include="Production\BOM\BOM.aspx" />
     <Content Include="Production\BOM\ViewBOM.aspx" />
+    <Content Include="Production\BOM\ViewWIPCons.aspx" />
     <Content Include="Production\MM\GRN\grn_det.aspx" />
     <Content Include="Production\MM\GRN\grn_exp_post.aspx" />
     <Content Include="Production\MM\GRN\grn_main.aspx" />
+    <Content Include="Production\MM\MRN.aspx" />
+    <Content Include="Production\MM\MTN\Prod_issue_det.aspx" />
+    <Content Include="Production\MM\MTN\Prod_issue_note.aspx" />
+    <Content Include="Production\MM\MTN\Wip_production_entry.aspx" />
+    <Content Include="Production\MM\WIP\Wip_production.aspx" />
+    <Content Include="Reports\Daily_Back_Process_Report.aspx" />
+    <Content Include="Reports\MM\Stock_Level.aspx" />
+    <Content Include="Reports\MM\Wip_Stock.aspx" />
+    <Content Include="Reports\Sale_wise_Cons.aspx" />
+    <Content Include="Reports\Supplier\Itemwise_purchase_report.aspx" />
+    <Content Include="Reports\Supplier\SupplierLedger.aspx" />
+    <Content Include="Sale\FGTransfer\FG_SALE_Transfer.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -164,7 +211,22 @@
     <Content Include="scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="scripts\jquery-ui.js" />
     <Content Include="scripts\npm.js" />
-    <Content Include="Web.config" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounts_Transactions\VendorPay.aspx.cs">
@@ -276,6 +338,16 @@
     <Compile Include="Master\warehousing\wh_type.aspx.designer.cs">
       <DependentUpon>wh_type.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OCCOTOPOS3DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OCCOTOPOS3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OCCOTOPOS3_RESDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OCCOTOPOS3_RESDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Production\BOM\BOM.aspx.cs">
       <DependentUpon>BOM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +361,13 @@
     </Compile>
     <Compile Include="Production\BOM\ViewBOM.aspx.designer.cs">
       <DependentUpon>ViewBOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\BOM\ViewWIPCons.aspx.cs">
+      <DependentUpon>ViewWIPCons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\BOM\ViewWIPCons.aspx.designer.cs">
+      <DependentUpon>ViewWIPCons.aspx</DependentUpon>
     </Compile>
     <Compile Include="Production\MM\GRN\grn_det.aspx.cs">
       <DependentUpon>grn_det.aspx</DependentUpon>
@@ -311,7 +390,102 @@
     <Compile Include="Production\MM\GRN\grn_main.aspx.designer.cs">
       <DependentUpon>grn_main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Production\MM\MRN.aspx.cs">
+      <DependentUpon>MRN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\MM\MRN.aspx.designer.cs">
+      <DependentUpon>MRN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\MM\MTN\Prod_issue_det.aspx.cs">
+      <DependentUpon>Prod_issue_det.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\MM\MTN\Prod_issue_det.aspx.designer.cs">
+      <DependentUpon>Prod_issue_det.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\MM\MTN\Prod_issue_note.aspx.cs">
+      <DependentUpon>Prod_issue_note.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\MM\MTN\Prod_issue_note.aspx.designer.cs">
+      <DependentUpon>Prod_issue_note.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\MM\MTN\Wip_production_entry.aspx.cs">
+      <DependentUpon>Wip_production_entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\MM\MTN\Wip_production_entry.aspx.designer.cs">
+      <DependentUpon>Wip_production_entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Production\MM\WIP\Wip_production.aspx.cs">
+      <DependentUpon>Wip_production.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Production\MM\WIP\Wip_production.aspx.designer.cs">
+      <DependentUpon>Wip_production.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Daily_Back_Process_Report.aspx.cs">
+      <DependentUpon>Daily_Back_Process_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Daily_Back_Process_Report.aspx.designer.cs">
+      <DependentUpon>Daily_Back_Process_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MM\Stock_Level.aspx.cs">
+      <DependentUpon>Stock_Level.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MM\Stock_Level.aspx.designer.cs">
+      <DependentUpon>Stock_Level.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MM\Wip_Stock.aspx.cs">
+      <DependentUpon>Wip_Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MM\Wip_Stock.aspx.designer.cs">
+      <DependentUpon>Wip_Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sale_wise_Cons.aspx.cs">
+      <DependentUpon>Sale_wise_Cons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Sale_wise_Cons.aspx.designer.cs">
+      <DependentUpon>Sale_wise_Cons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Supplier\Itemwise_purchase_report.aspx.cs">
+      <DependentUpon>Itemwise_purchase_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Supplier\Itemwise_purchase_report.aspx.designer.cs">
+      <DependentUpon>Itemwise_purchase_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Supplier\SupplierLedger.aspx.cs">
+      <DependentUpon>SupplierLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Supplier\SupplierLedger.aspx.designer.cs">
+      <DependentUpon>SupplierLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FGTransfer\FG_SALE_Transfer.aspx.cs">
+      <DependentUpon>FG_SALE_Transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sale\FGTransfer\FG_SALE_Transfer.aspx.designer.cs">
+      <DependentUpon>FG_SALE_Transfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppLogic\AppLogic.csproj">
@@ -338,9 +512,17 @@
   <ItemGroup>
     <Folder Include="Administration\" />
     <Folder Include="apps\" />
+    <Folder Include="Reports\Production\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Production\BOM\Report2.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -357,7 +539,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1692</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1692/</IISUrl>
+          <IISUrl>http://localhost:1025/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

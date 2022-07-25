@@ -12,7 +12,7 @@ namespace ESIT_ERP.Production.BOM
 {
     public partial class ViewBOM : System.Web.UI.Page
     {
-        protected string cs = @"data source=SHARIQ-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         AppLogic.LoadGRN load_grn = new AppLogic.LoadGRN();
         AppLogic.LoadGRN ins_grn = new AppLogic.LoadGRN();
         Numerator.Numerator num = new Numerator.Numerator();
@@ -27,10 +27,12 @@ namespace ESIT_ERP.Production.BOM
             if (Session["userlogin"] == null)
                 Response.Redirect("/login.aspx");
             cur_actionid = apps.getActionId(Convert.ToInt32(Session["userlogin"]), appid);
+
             if (Request.QueryString["bomid"] != null)
             {
 
             }
+
         }
 
         public string ppo(int rid)
@@ -76,7 +78,57 @@ namespace ESIT_ERP.Production.BOM
                 str=(string)rdr["restaurant_sale_db"];
             }
             con.Close();
-            return @"data source=SHARIQ-PC\SQLEXPRESS;initial catalog=" + str + "; integrated security=True";
+            return @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=" + str + "; integrated security=True";
         }
+
+        protected void btnAdd_Click(object sender,EventArgs e)
+        {
+            if (txtbiqty.Text!="")
+            {
+                if (Convert.ToString(Request.QueryString["bomid"]) != "")
+                {
+                    try
+                    {
+                        SqlConnection con = new SqlConnection(cs);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO BOM_det_raw(bom_id,iid,iqty) values('" + Convert.ToString(Request.QueryString["bomid"]) + "'," + DropDownList1.SelectedValue + "," + Convert.ToDecimal(txtbiqty.Text) + ")", con);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write("<script>alert(" + ex + ")</script>");
+                    }
+                    Response.Redirect("/Production/BOM/ViewBOM.aspx?bomid=" + Request.QueryString["bomid"]);
+                }
+            }
+        }
+
+        protected void btnFinish_Click(object sender,EventArgs e)
+        {
+            
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = true;
+        }
+
+        public bool itHasWip(int a)
+        {
+            bool b = false;
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("select hasWip from BOM where id=" + a, con);
+            SqlDataReader rdr = null;
+            con.Open();
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read() == true)
+            {
+                b = (bool)rdr["hasWip"];
+            }
+            con.Close();
+            return b;
+        }
+
     }
 }

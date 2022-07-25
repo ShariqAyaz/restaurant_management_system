@@ -112,6 +112,24 @@ namespace ESIT_ERP.Master.vendor {
         protected global::System.Web.UI.WebControls.TextBox txtbvendordescription;
         
         /// <summary>
+        /// lblVendorOpeningAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVendorOpeningAmount;
+        
+        /// <summary>
+        /// txtVenOpenAmt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtVenOpenAmt;
+        
+        /// <summary>
         /// btnAdd2 control.
         /// </summary>
         /// <remarks>

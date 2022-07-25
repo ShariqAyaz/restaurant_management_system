@@ -10,7 +10,7 @@ namespace postproceed
 {
     public class postproceed
     {
-        protected string cs = @"data source=SHARIQ-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         public string repText;
         public bool errTrue = false;
         protected ModWarehouse appl = new ModWarehouse();
@@ -233,7 +233,49 @@ namespace postproceed
                 conVENDOR.Close();
                 repText = ex.ToString();
                 errTrue = true;
-                //throw;
+                return;
+            }
+            if (vendor.open_amt > 0)
+            {
+                SqlConnection conVAMT = new SqlConnection(cs);
+                SqlCommand cmdVAMT = new SqlCommand("INSERT INTO account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) VALUES('2','" + Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")) + "',0,'" + "Opening As of " + Convert.ToDateTime(DateTime.Now.ToString("yyyy -MM-dd HH:mm:ss")) + "'," + vendor.open_amt + "," + 0 + ",'" + vendor.b_entity_id + "')", conVAMT);
+                try
+                {
+                    conVAMT.Open();
+                    cmdVAMT.ExecuteNonQuery();
+                    conVAMT.Close();
+                    errTrue = false;
+                }
+                catch (Exception ex)
+                {
+                    conVAMT.Close();
+                    repText = ex.ToString();
+                    errTrue = true;
+                    //throw;
+                }
+                //
+                try
+                {
+                    SqlConnection conCHKVID = new SqlConnection(cs);
+                    SqlCommand cmdCHKVID = new SqlCommand("select id from vendor_master where VendorName='"+vendor.VendorName+"'", conCHKVID);
+                    conCHKVID.Open();
+                    SqlDataReader rdrCHKVID = cmdCHKVID.ExecuteReader();
+                    if (rdrCHKVID.Read()==true)
+                    {
+                        vendor.vid = (int)rdrCHKVID["id"];
+                    }
+                    conCHKVID.Close();
+                    //
+                    SqlConnection con = new SqlConnection(cs);
+                    SqlCommand cmd = new SqlCommand("insert into vendor_transactions(ven_id,ttype,tdate,ref_doc_no,dr,cr,remarks,uid,b_entity_id) values(" + vendor.vid + ",'OPENING_AMOUNT','" + Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")) + "','0',0," + vendor.open_amt + ",'" + "Opening As of " + Convert.ToDateTime(DateTime.Now.ToString("yyyy -MM-dd HH:mm:ss")) + "'," + vendor.uid + "," + vendor.b_entity_id + ")", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    
+                }
             }
         }
 

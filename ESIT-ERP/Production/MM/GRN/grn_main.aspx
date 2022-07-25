@@ -53,7 +53,7 @@
                     <asp:TextBox runat="server" ID="txtRemarks" CssClass="form-control" placeholder="Remarks" />
                 </div>
                 <div class="col-md-8">
-                    <asp:Button runat="server" CssClass="btn btn-danger" Style="width: 100%; margin-top: 35px;" ID="btnNext" Text="NEXT" />
+                    <asp:Button runat="server" CssClass="btn btn-danger" Style="width: 100%; margin-top: 35px;" ID="btnNext" Text="NEXT" OnClick="btnNext_Click" />
                 </div>
                 <br />
                 <br />

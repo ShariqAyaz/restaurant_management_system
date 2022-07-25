@@ -1,0 +1,14 @@
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.csprojResolveAssemblyReference.cache
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.frmMain.resources
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.Properties.Resources.resources
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.csproj.GenerateResource.Cache
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\bin\Debug\DAPP.exe.config
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\bin\Debug\DAPP.exe
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\bin\Debug\DAPP.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.frmVP.resources
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.exe
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\bin\Debug\stdole.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\bin\Debug\FlashControlV71.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\DAPP\obj\Debug\DAPP.printPreview_VENDORPAY.resources

@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using AppLogic;
 
+
 namespace rdgrant
 {
     public class rdgrant
     {
-        protected string cs = @"data source=SHARIQ-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         protected bool validuser = false;
+        
         public bool userlogin(AuthUser usr)
         {
             SqlConnection con = new SqlConnection(cs);
@@ -42,6 +44,22 @@ namespace rdgrant
             return uid;
         }
 
+        protected string uname;
+        public string getUname(int uid)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("SELECT userid FROM USERS WHERE id="+uid, con);
+            SqlDataReader rdr = null;
+            con.Open();
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read() == true)
+            {
+                uname = (string)rdr["userid"];
+            }
+            con.Close();
+            return uname;
+        }
+
         public string getUID(int uid, int get_bid, string what = null)
         {
             if (what != null & what == "LSTAPP")
@@ -50,6 +68,8 @@ namespace rdgrant
             }
             return sqlres;
         }
+
+
 
         protected string orgname = ""; // getbentitydet
 

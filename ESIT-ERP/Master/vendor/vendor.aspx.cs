@@ -56,9 +56,12 @@ namespace ESIT_ERP.Master.vendor
                     newvendor.Contact_Person_Phone = (Request.Form["txtbvendorpersonphone"]);
                     newvendor.Address = (Request.Form["txtbvendoraddress"]);
                     newvendor.goods_desc = (Request.Form["txtbvendordescription"]);
+                    newvendor.open_amt = Convert.ToDecimal(Request.Form["txtVenOpenAmt"]);
+                    newvendor.b_entity_id = Convert.ToInt16(Session["bid"]);
+                    //newvendor.uid = Convert.ToInt32(Session["userlogin"]);
+                    newvendor.uid = Convert.ToInt32(Session["userlogin"]);
                     pp.postmaster_vendor(newvendor);
-
-
+                    
                     if (pp.errTrue == true)
                         Response.Write("<script>alert('" + pp.repText + "')</script>");
                     Response.Write("<script>location.replace(location.pathname)</script>");

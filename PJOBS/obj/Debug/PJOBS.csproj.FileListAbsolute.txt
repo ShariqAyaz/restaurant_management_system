@@ -1,0 +1,13 @@
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\PJOBS.exe.config
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\PJOBS.exe
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\PJOBS.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\FlashControlV71.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\stdole.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.Properties.Resources.resources
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.csproj.GenerateResource.Cache
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.exe
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.pdb
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.csprojResolveAssemblyReference.cache
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.frmJOB.resources

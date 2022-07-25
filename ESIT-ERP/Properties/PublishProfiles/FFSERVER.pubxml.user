@@ -9,6 +9,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>\\192.168.0.10\inetpub\wwwroot\</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Accounts_Transactions/VendorPay.aspx">
+      <publishTime>10/21/2019 21:49:05</publishTime>
+    </File>
     <File Include="ApplicationInsights.config">
       <publishTime>05/07/2019 23:27:46</publishTime>
     </File>
@@ -34,25 +37,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/25/2016 15:53:28</publishTime>
     </File>
     <File Include="assets/css/bootstrap.min.css">
-      <publishTime>05/23/2019 23:51:03</publishTime>
+      <publishTime>07/31/2019 23:19:05</publishTime>
     </File>
     <File Include="assets/css/bootstrap.min.css.map">
       <publishTime>07/25/2016 15:53:28</publishTime>
     </File>
+    <File Include="assets/css/jquery-ui.css">
+      <publishTime>06/09/2019 02:18:01</publishTime>
+    </File>
     <File Include="assets/css/Lato-Bold.ttf">
-      <publishTime>05/10/2019 15:55:10</publishTime>
+      <publishTime>10/05/2019 15:55:10</publishTime>
     </File>
     <File Include="assets/css/Lato-Hairline.ttf">
-      <publishTime>05/10/2019 15:55:10</publishTime>
+      <publishTime>10/05/2019 15:55:10</publishTime>
     </File>
     <File Include="assets/css/Lato-Regular.ttf">
-      <publishTime>05/10/2019 15:55:10</publishTime>
+      <publishTime>10/05/2019 15:55:10</publishTime>
     </File>
     <File Include="assets/css/Lato-Thin.ttf">
-      <publishTime>05/10/2019 15:55:10</publishTime>
+      <publishTime>10/05/2019 15:55:10</publishTime>
     </File>
     <File Include="assets/css/style.css">
-      <publishTime>05/24/2019 01:44:33</publishTime>
+      <publishTime>10/12/2019 05:15:29</publishTime>
     </File>
     <File Include="assets/css/style2.css">
       <publishTime>05/24/2019 01:44:33</publishTime>
@@ -81,6 +87,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="assets/js/bootstrap.min.js">
       <publishTime>07/25/2016 15:53:30</publishTime>
     </File>
+    <File Include="assets/js/jquery-3.4.1.js">
+      <publishTime>03/06/2019 19:16:54</publishTime>
+    </File>
     <File Include="assets/js/jquery-3.4.1.slim.min.js">
       <publishTime>05/11/2019 00:47:02</publishTime>
     </File>
@@ -90,56 +99,104 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="assets/js/npm.js">
       <publishTime>07/25/2016 15:53:30</publishTime>
     </File>
+    <File Include="bentity_selection.aspx">
+      <publishTime>06/20/2019 23:13:57</publishTime>
+    </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>05/07/2019 23:27:46</publishTime>
     </File>
     <File Include="bin/AppLogic.dll">
-      <publishTime>05/27/2019 20:59:16</publishTime>
+      <publishTime>12/10/2019 01:25:20</publishTime>
     </File>
     <File Include="bin/AppLogic.pdb">
-      <publishTime>05/27/2019 20:59:16</publishTime>
+      <publishTime>12/10/2019 01:25:20</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:26:06</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:25:54</publishTime>
     </File>
     <File Include="bin/ESIT-ERP.dll">
-      <publishTime>05/27/2019 21:00:37</publishTime>
+      <publishTime>12/12/2019 01:37:17</publishTime>
     </File>
     <File Include="bin/ESIT-ERP.pdb">
-      <publishTime>05/27/2019 21:00:37</publishTime>
+      <publishTime>12/12/2019 01:37:17</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:27:18</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:26:02</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>10/11/2019 02:14:28</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:25:22</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:27:16</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
-      <publishTime>12/07/2015 19:04:38</publishTime>
+      <publishTime>07/12/2015 19:04:38</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>03/10/2016 14:26:18</publishTime>
+      <publishTime>10/03/2016 14:26:18</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>03/10/2016 14:26:26</publishTime>
+      <publishTime>10/03/2016 14:26:26</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>03/09/2016 12:00:14</publishTime>
+      <publishTime>09/03/2016 12:00:14</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>03/10/2016 14:26:26</publishTime>
+      <publishTime>10/03/2016 14:26:26</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>03/10/2016 14:26:26</publishTime>
+      <publishTime>10/03/2016 14:26:26</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>03/09/2016 11:57:34</publishTime>
+      <publishTime>09/03/2016 11:57:34</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>06/15/2015 14:06:24</publishTime>
     </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>02/20/2011 16:40:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <publishTime>04/20/2019 19:17:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>02/20/2011 16:40:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WinForms.dll">
+      <publishTime>02/20/2011 16:40:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Types.dll">
+      <publishTime>10/12/2016 15:26:34</publishTime>
+    </File>
+    <File Include="bin/Numerator.dll">
+      <publishTime>12/10/2019 01:25:20</publishTime>
+    </File>
+    <File Include="bin/Numerator.pdb">
+      <publishTime>12/10/2019 01:25:20</publishTime>
+    </File>
     <File Include="bin/postproceed.dll">
-      <publishTime>05/27/2019 20:59:17</publishTime>
+      <publishTime>12/10/2019 01:25:21</publishTime>
     </File>
     <File Include="bin/postproceed.pdb">
-      <publishTime>05/27/2019 20:59:17</publishTime>
+      <publishTime>12/10/2019 01:25:21</publishTime>
+    </File>
+    <File Include="bin/pt/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:25:24</publishTime>
     </File>
     <File Include="bin/rdgrant.dll">
-      <publishTime>05/27/2019 20:59:16</publishTime>
+      <publishTime>12/10/2019 01:25:21</publishTime>
     </File>
     <File Include="bin/rdgrant.pdb">
-      <publishTime>05/27/2019 20:59:16</publishTime>
+      <publishTime>12/10/2019 01:25:21</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/19/2015 08:19:46</publishTime>
@@ -177,26 +234,56 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>06/19/2015 08:19:46</publishTime>
     </File>
+    <File Include="bin/ru/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:25:46</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
+      <publishTime>09/24/2019 07:00:35</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/SqlServerSpatial140.dll">
+      <publishTime>09/24/2019 07:00:36</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/msvcr120.dll">
+      <publishTime>09/24/2019 07:00:35</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/SqlServerSpatial140.dll">
+      <publishTime>09/24/2019 07:00:35</publishTime>
+    </File>
+    <File Include="bin/transactions.dll">
+      <publishTime>12/10/2019 01:25:21</publishTime>
+    </File>
+    <File Include="bin/transactions.pdb">
+      <publishTime>12/10/2019 01:25:21</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:27:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.SqlServer.Types.resources.dll">
+      <publishTime>02/21/2014 17:28:10</publishTime>
+    </File>
     <File Include="default.aspx">
-      <publishTime>05/26/2019 01:04:07</publishTime>
+      <publishTime>03/06/2019 17:39:11</publishTime>
+    </File>
+    <File Include="getItemDesc.asmx">
+      <publishTime>06/19/2019 11:34:19</publishTime>
     </File>
     <File Include="imports.html">
       <publishTime>05/14/2019 23:19:16</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>05/23/2019 01:30:36</publishTime>
+      <publishTime>03/06/2019 17:39:17</publishTime>
     </File>
     <File Include="Master/department/department.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>01/06/2019 23:32:27</publishTime>
     </File>
     <File Include="Master/department/dept_cat.aspx">
       <publishTime>05/27/2019 00:41:25</publishTime>
     </File>
     <File Include="Master/item/item.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>09/24/2019 03:40:35</publishTime>
     </File>
     <File Include="Master/item/item_cat.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>03/08/2019 03:52:02</publishTime>
     </File>
     <File Include="Master/item/item_subcat.aspx">
       <publishTime>05/27/2019 00:41:25</publishTime>
@@ -205,22 +292,97 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/27/2019 00:41:25</publishTime>
     </File>
     <File Include="Master/vendor/vendor.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>09/18/2019 18:00:43</publishTime>
     </File>
     <File Include="Master/warehousing/warehouse.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>01/06/2019 22:55:24</publishTime>
     </File>
     <File Include="Master/warehousing/wh_cat.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>03/08/2019 02:55:14</publishTime>
     </File>
     <File Include="Master/warehousing/wh_location.aspx">
-      <publishTime>05/27/2019 00:41:25</publishTime>
+      <publishTime>01/06/2019 17:45:28</publishTime>
     </File>
     <File Include="Master/warehousing/wh_type.aspx">
       <publishTime>05/27/2019 00:41:25</publishTime>
     </File>
+    <File Include="OCCOTOPOS3DataSet.xsc">
+      <publishTime>09/21/2019 21:42:48</publishTime>
+    </File>
+    <File Include="OCCOTOPOS3DataSet.xss">
+      <publishTime>09/21/2019 21:42:48</publishTime>
+    </File>
+    <File Include="OCCOTOPOS3_RESDataSet.xsc">
+      <publishTime>09/16/2019 22:25:26</publishTime>
+    </File>
+    <File Include="OCCOTOPOS3_RESDataSet.xss">
+      <publishTime>09/16/2019 22:25:26</publishTime>
+    </File>
     <File Include="packages.config">
-      <publishTime>05/07/2019 23:27:48</publishTime>
+      <publishTime>10/11/2019 02:07:33</publishTime>
+    </File>
+    <File Include="Production/BOM/BOM.aspx">
+      <publishTime>10/12/2019 00:58:12</publishTime>
+    </File>
+    <File Include="Production/BOM/ViewBOM.aspx">
+      <publishTime>10/12/2019 05:06:59</publishTime>
+    </File>
+    <File Include="Production/BOM/ViewWIPCons.aspx">
+      <publishTime>10/12/2019 05:20:45</publishTime>
+    </File>
+    <File Include="Production/MM/GRN/grn_det.aspx">
+      <publishTime>07/08/2019 23:29:15</publishTime>
+    </File>
+    <File Include="Production/MM/GRN/grn_exp_post.aspx">
+      <publishTime>06/24/2019 20:40:34</publishTime>
+    </File>
+    <File Include="Production/MM/GRN/grn_main.aspx">
+      <publishTime>10/14/2019 01:47:52</publishTime>
+    </File>
+    <File Include="Production/MM/MRN.aspx">
+      <publishTime>03/10/2019 00:44:09</publishTime>
+    </File>
+    <File Include="Production/MM/MTN/Prod_issue_det.aspx">
+      <publishTime>09/24/2019 21:17:39</publishTime>
+    </File>
+    <File Include="Production/MM/MTN/Prod_issue_details.aspx">
+      <publishTime>09/20/2019 20:38:46</publishTime>
+    </File>
+    <File Include="Production/MM/MTN/Prod_issue_note.aspx">
+      <publishTime>09/20/2019 23:09:29</publishTime>
+    </File>
+    <File Include="Production/MM/MTN/WebForm1.aspx">
+      <publishTime>09/20/2019 21:18:05</publishTime>
+    </File>
+    <File Include="Production/MM/MTN/Wip_production_entry.aspx">
+      <publishTime>09/24/2019 16:49:44</publishTime>
+    </File>
+    <File Include="Production/MM/WIP/Wip_production.aspx">
+      <publishTime>09/28/2019 20:45:41</publishTime>
+    </File>
+    <File Include="Reports/Daily_Back_Process_Report.aspx">
+      <publishTime>10/20/2019 01:39:28</publishTime>
+    </File>
+    <File Include="Reports/MM/Stock_Level.aspx">
+      <publishTime>10/14/2019 01:42:27</publishTime>
+    </File>
+    <File Include="Reports/MM/Wip_Stock.aspx">
+      <publishTime>10/14/2019 01:41:39</publishTime>
+    </File>
+    <File Include="Reports/Production/RPDailySMC.aspx">
+      <publishTime>09/24/2019 01:58:58</publishTime>
+    </File>
+    <File Include="Reports/Sale_wise_Cons.aspx">
+      <publishTime>10/16/2019 00:29:41</publishTime>
+    </File>
+    <File Include="Reports/Supplier/Itemwise_purchase_report.aspx">
+      <publishTime>09/28/2019 20:20:29</publishTime>
+    </File>
+    <File Include="Reports/Supplier/SupplierLedger.aspx">
+      <publishTime>09/28/2019 21:24:47</publishTime>
+    </File>
+    <File Include="Sale/FGTransfer/FG_SALE_Transfer.aspx">
+      <publishTime>08/10/2019 05:03:41</publishTime>
     </File>
     <File Include="scripts/ai.0.22.9-build00167.js">
       <publishTime>05/07/2019 23:27:48</publishTime>
@@ -243,8 +405,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="scripts/npm.js">
       <publishTime>05/11/2019 01:19:55</publishTime>
     </File>
+    <File Include="SqlServerTypes/readme.htm">
+      <publishTime>09/24/2019 07:00:34</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/msvcr120.dll">
+      <publishTime>09/24/2019 07:00:35</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/SqlServerSpatial140.dll">
+      <publishTime>09/24/2019 07:00:36</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/msvcr120.dll">
+      <publishTime>09/24/2019 07:00:35</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/SqlServerSpatial140.dll">
+      <publishTime>09/24/2019 07:00:35</publishTime>
+    </File>
     <File Include="Web.config">
-      <publishTime>05/27/2019 21:00:37</publishTime>
+      <publishTime>12/12/2019 01:37:18</publishTime>
     </File>
   </ItemGroup>
 </Project>

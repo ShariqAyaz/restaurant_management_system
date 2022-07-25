@@ -27,6 +27,8 @@ namespace ESIT_ERP.Production.MM.GRN
                 Response.Redirect("/login.aspx");
             cur_actionid = apps.getActionId(Convert.ToInt32(Session["userlogin"]), appid);
 
+            
+
             if (Session["grnno"] != null & Session["GRNisPosted"] != null & Session["grnpstage"] != null)
             {
                 if (Request.Form["btnnext"] != null)
@@ -87,6 +89,7 @@ namespace ESIT_ERP.Production.MM.GRN
                 }
                 else
                 {
+                    txtBox.Text = DateTime.Now.ToString("MM/dd/yyyy");
                     //  GRN FORM OPEN AS FRESH MODE //
                     Reset();
                 }
@@ -97,6 +100,7 @@ namespace ESIT_ERP.Production.MM.GRN
                 Session.Remove("grnpstage");
                 Session.Remove("GRNisPosted");
             }
+            
             //txtBox.Text = DateTime.Now.ToString();
             //if (cur_actionid == 1)
             //{
@@ -154,6 +158,11 @@ namespace ESIT_ERP.Production.MM.GRN
             Session.Remove("grnpstage");
             Session.Remove("GRNisPosted");
             Response.Redirect("/");
+        }
+
+        protected void btnNext_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

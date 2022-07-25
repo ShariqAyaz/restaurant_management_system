@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OCCOTOPOS3_RESDataSet" targetNamespace="http://tempuri.org/OCCOTOPOS3_RESDataSet.xsd" xmlns:mstns="http://tempuri.org/OCCOTOPOS3_RESDataSet.xsd" xmlns="http://tempuri.org/OCCOTOPOS3_RESDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="OCCOTOPOS3_RESConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OCCOTOPOS3_RESConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.OCCOTOPOS3_RESConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OCCOTOPOS3_RESConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+                             (SELECT        SUM(TotalAmount) AS Expr1
+                               FROM            Tickets AS T
+                               WHERE        (Date &gt; '2019-09-01') AND (LastPaymentDate &lt;= '2019-09-21')) AS TOT, 
+							    OO.Price * OO.Quantity AS price,
+                             (SELECT        MIN(Date) AS Expr1
+                               FROM            Tickets AS T
+                               WHERE        (Date &gt; '2019-09-01') AND (LastPaymentDate &lt;= '2019-09-21')) AS FDT,
+                             (SELECT        MAX(LastPaymentDate) AS Expr1
+                               FROM            Tickets AS T
+                               WHERE        (Date &gt; '2019-09-01') AND (LastPaymentDate &lt;= '2019-09-21')) AS LDT
+FROM            Tickets AS TT INNER JOIN
+                         Orders AS OO ON TT.Id = OO.TicketId
+WHERE        (OO.OrderStates NOT LIKE '%Void%') AND (TT.Date &gt; '2019-09-01') AND 
+                         (TT.LastPaymentDate &lt;= '2019-09-21')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TOT" DataSetColumn="TOT" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="FDT" DataSetColumn="FDT" />
+              <Mapping SourceColumn="LDT" DataSetColumn="LDT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OCCOTOPOS3_RESDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OCCOTOPOS3_RESDataSet" msprop:Generator_UserDSName="OCCOTOPOS3_RESDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TOT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOT" msprop:Generator_ColumnPropNameInRow="TOT" msprop:Generator_ColumnPropNameInTable="TOTColumn" msprop:Generator_UserColumnName="TOT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="price" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FDT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFDT" msprop:Generator_ColumnPropNameInRow="FDT" msprop:Generator_ColumnPropNameInTable="FDTColumn" msprop:Generator_UserColumnName="FDT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LDT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLDT" msprop:Generator_ColumnPropNameInRow="LDT" msprop:Generator_ColumnPropNameInTable="LDTColumn" msprop:Generator_UserColumnName="LDT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

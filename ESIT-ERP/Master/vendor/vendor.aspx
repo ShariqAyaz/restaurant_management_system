@@ -14,7 +14,7 @@
     <script src="/script/jquery-ui.js"></script>
     <script src="/script/bootstrap.min.js"></script>
 </head>
-<body style="background-color:;">
+<body style="">
     <div class=" text-center top-header" style="">
         <h2 class="marginpaddingzero headering-lettersp lato" style="padding:10px !important;"><a href="/">EateryManager</a></h2>
         <h3 class="marginpaddingzero lato red-active" style="background:#d6d6d6;padding:5px !important;">ANWAR BALOCH RESTAURANT</h3>
@@ -43,8 +43,12 @@
                         <asp:TextBox ID="txtbvendoraddress" runat="server" CssClass="form-control" placeholder="Enter Vendor Address" required=""></asp:TextBox>
                     </div>
                     <div class="col-md-6">
-                    <asp:Label ID="lblvendordescription" CssClass="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-5 red-active text-center" CssStyle="vertical-align:center" for="txtWHName" runat="server"><b class="red-active">Good Description and Type</b></asp:Label>
+                    <asp:Label ID="lblvendordescription" CssClass="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-5 red-active text-center" CssStyle="vertical-align:center" for="txtbvendordescription" runat="server"><b class="red-active">Good Description and Type</b></asp:Label>
                         <asp:TextBox ID="txtbvendordescription" runat="server" CssClass="form-control" placeholder="Enter Good Description and Type" required=""></asp:TextBox>
+                    </div>
+                    <div class="col-md-6">
+                    <asp:Label ID="lblVendorOpeningAmount" CssClass="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-5 red-active text-center" CssStyle="vertical-align:center" for="txtVenOpenAmt" runat="server"><b class="red-active">Opening Amount</b></asp:Label>
+                        <asp:TextBox ID="txtVenOpenAmt" runat="server" CssClass="form-control" placeholder="Kindly Enter Opening Amount or Zero" required="">0</asp:TextBox>
                     </div>
                 </div>
              </div>    

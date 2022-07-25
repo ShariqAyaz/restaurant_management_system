@@ -29,18 +29,19 @@
             <h4 style="margin: 0px; padding: 0px;"><strong>RECIPE LIST</strong></h4>
         </div>
         <div class="container breadcrumb">
-            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="BOMSQLDSOURCE" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="BOMSQLDSOURCE" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:BoundField DataField="id" HeaderText="Receipe ID" ReadOnly="True" SortExpression="id" />
-                    <asp:BoundField DataField="fg_id" HeaderText="Product ID" SortExpression="fg_id" />
-                    <asp:BoundField DataField="fg_Name" HeaderText="Product Name" SortExpression="fg_Name" />
-                    <asp:BoundField DataField="version" HeaderText="Version" SortExpression="version" />
+                    <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" InsertVisible="False" />
+                    <asp:BoundField DataField="Profile_Name" HeaderText="Profile_Name" SortExpression="Profile_Name" />
+                    <asp:BoundField DataField="fg_id" HeaderText="fg_id" SortExpression="fg_id" />
+                    <asp:BoundField DataField="tag" HeaderText="tag" SortExpression="tag" />
+                    <asp:BoundField DataField="version" HeaderText="version" SortExpression="version" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="BOMSQLDSOURCE" runat="server" ConnectionString="<%$ ConnectionStrings:ESITERPConnectionString %>" SelectCommand="select * from BOM where Isactive=1 AND b_entity_id=@bid">
+            <asp:SqlDataSource ID="BOMSQLDSOURCE" runat="server" ConnectionString="<%$ ConnectionStrings:ESITERPConnectionString %>" SelectCommand="select B.id,Profile_Name,fg_id,tag,[version] from BOM B INNER JOIN FFMENU FM ON B.fg_id=FM.id AND B.Isactive=1 AND B.b_entity_id=@bid">
                 <SelectParameters>
-                    <asp:SessionParameter Name="bid" SessionField="bid" />
+                    <asp:SessionParameter Name="bid" SessionField="bid" DefaultValue="" />
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>

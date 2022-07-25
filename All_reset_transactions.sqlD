@@ -1,0 +1,12 @@
+
+
+--reset
+
+delete from grn_expense_det
+delete from grn_items_det
+delete from vendor_transactions
+delete from grn_note
+delete from account_transactions
+delete from store_det
+delete from store
+update numerator set grn=0 , store_doc_id=0

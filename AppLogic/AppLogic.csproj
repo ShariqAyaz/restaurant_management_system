@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,17 +44,21 @@
   <ItemGroup>
     <Compile Include="AuthUser.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="get_bcode.cs" />
     <Compile Include="GRN_ITEMS.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="LoadGRN.cs" />
+    <Compile Include="LoadPIN.cs" />
     <Compile Include="ModDepartment.cs" />
     <Compile Include="ModItem.cs" />
     <Compile Include="ModVendor.cs" />
     <Compile Include="ModWarehouse.cs" />
+    <Compile Include="MRN.cs" />
     <Compile Include="Vendor.cs" />
     <Compile Include="Vendor_payment.cs" />
     <Compile Include="Warehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WipProductionEntry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

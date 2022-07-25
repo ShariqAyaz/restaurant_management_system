@@ -11,8 +11,9 @@ namespace transactions
 {
     public class transactions
     {
-        protected string cs = @"data source=SHARIQ-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         protected LoadGRN lgrn = new LoadGRN();
+        protected MRN loadMRN = new MRN();
         protected GRN_ITEMS[] grnItems = null;// new GRN_ITEMS[ii];
         Numerator.Numerator num = new Numerator.Numerator();
         public AppLogic.LoadGRN chkgrn(int grnno)
@@ -56,6 +57,45 @@ namespace transactions
                 con.Close();
                 isInserted = false;
                 throw ex;
+            }
+            return isInserted;
+        }
+
+        public void WIP_Decrease(int uid,int bid,DateTime dt,int wip_id,int iid,decimal wip_qty)
+        {
+            int doc_id = num.wip_production_docid();
+            try
+            {
+                SqlConnection con = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[wip_production]([doc_id],[source_whid],[issue_dept_id],[iid],[tdate],[wip_item_id],[wip_produce_qty],[iid_consume_qty],[wip_produce_issue],[iid_consume_issue],[uid],[b_entity_id],[remarks]) VALUES("+(doc_id+1)+",3,1,"+iid+",'"+dt+"',"+wip_id+",0,0,"+wip_qty+",0,"+uid+","+bid+",'TRANSFER RUN " + Convert.ToString(dt) + "')", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public bool insertPINote(LoadPIN insPIN)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Semi_Production] ([doc_id],[source_whid],[issue_dept_id],[tdate],[iid],[received_qty],[uid],[remarks]) VALUES("+insPIN.pinno+","+insPIN.source_whid+","+insPIN.issue_dept_id+",'"+insPIN.tdate+"',"+insPIN.iid+","+insPIN.received_qty+","+insPIN.uid+",'"+insPIN.remarks+"')", con);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                isInserted = true;
+                //
+                storedecrease(insPIN.pinno, "PINOTE", insPIN.uid, insPIN.b_entity_id);
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                isInserted = false;
+                //throw ex;
             }
             return isInserted;
         }
@@ -143,6 +183,31 @@ namespace transactions
             vendor_account_transaction_vpay(tno, uid, bid);
         }
 
+        protected WipProductionEntry wp_e = new WipProductionEntry();
+        public void postWIPProduction(WipProductionEntry wp)
+        {
+            wp_e=wp;
+            postWIP_Production_entry(wp);
+            storedecrease(0, "WIPPROD", 1, 1);
+        }
+
+        protected void postWIP_Production_entry(WipProductionEntry wp)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("insert into wip_production([doc_id],[source_whid],[issue_dept_id],[iid],[tdate],[wip_item_id],[wip_produce_qty],[iid_consume_qty],[uid],[b_entity_id],[remarks]) values(" + wp.doc_id+","+wp.source_whid+","+wp.issue_dept_id+","+wp.iid+",'"+wp.tdate+"',"+wp.wip_item_id+","+wp.wip_produce_qty+","+wp.iid_consume_qty + ","+wp.uid+","+wp.b_entity_id + ",'"+wp.remarks+"')", con);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                return;
+            }
+        }
+
         public void postGRN(string p_gno, int uid, int bid)
         {
             // VENDER TRANSACTION POSTING
@@ -150,6 +215,116 @@ namespace transactions
             vendor_account_transaction_grn(p_gno, uid, bid);
             storeIncrease(p_gno, "GRNPOST", uid, bid);
             postgrnnow(p_gno);
+        }
+
+        public void postMRN(MRN mrn)
+        {
+            // Material Return Note // MRN
+            loadMRN = mrn;
+            vendor_transaction(Convert.ToString(loadMRN.doc_id), "MRN", loadMRN.uid, loadMRN.b_entity_id);
+            vendor_account_transaction_MRN(Convert.ToString(loadMRN.doc_id), loadMRN.uid, loadMRN.b_entity_id);
+            storedecreaseMRN(loadMRN.doc_id, "MRN", loadMRN.uid, loadMRN.b_entity_id);
+            //postgrnnow(p_gno);
+        }
+
+        protected void vendor_account_transaction_MRN(string tno, int uid, int bid)
+        {
+            // CR
+            SqlConnection con2 = new SqlConnection(cs);
+            SqlCommand cmd2 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values((SELECT account_id from item_mast where id=" + loadMRN.iid + "),'"+loadMRN.doc_date+"'," + loadMRN.doc_id + ",'ReturnNote',"+loadMRN.decrease_qty*loadMRN.rate+",0," + bid + ")", con2);
+            con2.Open();
+            cmd2.ExecuteNonQuery();
+            con2.Close();
+            // DR
+
+            SqlConnection con3 = new SqlConnection(cs);
+            SqlCommand cmd3 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values(2,'" + loadMRN.doc_date + "'," + loadMRN.doc_id + ",'ReturnNote',0,"+ loadMRN.decrease_qty * loadMRN.rate + "," + bid + ")", con3);
+            con3.Open();
+            cmd3.ExecuteNonQuery();
+            con3.Close();
+        }
+
+        public int getwarehouseid(int a)
+        {
+            int r_ret = 0;
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("select default_wh from item_mast where id=" + a, con);
+            SqlDataReader rdr = null;
+            con.Open();
+            rdr = cmd.ExecuteReader();
+            if (rdr.Read()==true)
+            {
+                r_ret = (int)rdr["default_wh"];
+            }
+            con.Close();
+            return r_ret;
+        }
+
+        public void storedecreaseBOM(int uid, int bid, DateTime dt, int iid, decimal icons)
+        {
+            int store_DNO = num.store_doc_id();
+            int getwhid = getwarehouseid(iid);
+            try
+            {
+                SqlConnection con = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("INSERT INTO store(doc_id,ref_doc_no,doc_type_id,doc_date,uid,remarks,b_entity_id) values(" + store_DNO + "," + 0 + ",1009,'" + dt + "'," + uid + ",'BOM-AUTO-CONSUMPTION'," + bid + ")", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                //con.Close();
+            }
+            // STORE DET
+            try
+            {
+                SqlConnection conItems = new SqlConnection(cs);
+                SqlCommand cmdItems = new SqlCommand("INSERT INTO store_det(doc_id,iid,increase_qty,decrease_qty,whid) values(" + store_DNO + "," + iid + ",0," + icons + "," + getwhid + ")", conItems);
+                conItems.Open();
+                cmdItems.ExecuteNonQuery();
+                //while (rdrItems.Read() == true)
+                conItems.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        protected void storedecreaseMRN(int tno, string ttype, int uid, int bid)
+        {
+           // store_doc_id = num.store_doc_id();
+            if (ttype == "MRN")
+            {
+                // STORE HEAD
+                try
+                {
+                    SqlConnection con = new SqlConnection(cs);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO store(doc_id,ref_doc_no,doc_type_id,doc_date,uid,remarks,b_entity_id) values(" + loadMRN.doc_id + "," + loadMRN.doc_id + ",1008,'" + loadMRN.doc_date + "'," + uid + ",'" + loadMRN.remarks + "'," + loadMRN.b_entity_id + ")", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    //con.Close();
+                }
+                // STORE DET
+                try
+                {
+                    SqlConnection conItems = new SqlConnection(cs);
+                    SqlCommand cmdItems = new SqlCommand("INSERT INTO store_det(doc_id,iid,increase_qty,decrease_qty,whid) values(" + loadMRN.doc_id + "," + loadMRN.iid + ",0," + loadMRN.decrease_qty + "," + loadMRN.whid + ")", conItems);
+                    conItems.Open();
+                    cmdItems.ExecuteNonQuery();
+                    //while (rdrItems.Read() == true)
+                    conItems.Close();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
         }
 
         protected void postgrnnow(string gno)
@@ -181,7 +356,6 @@ namespace transactions
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
-
             }
             else if (ttype == "VENPAYMENT")
             {
@@ -190,6 +364,21 @@ namespace transactions
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
+            }
+            else if (ttype == "MRN")
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(cs);
+                    SqlCommand cmd = new SqlCommand("insert into vendor_transactions(ven_id,ttype,tdate,ref_doc_no,dr,cr,remarks,b_entity_id,uid) values(" + loadMRN.ven_id + ",'" + ttype + "','" + loadMRN.doc_date + "'," + tno + "," + loadMRN.rate * loadMRN.decrease_qty + ",0,'" + ttype + "-" + loadMRN.remarks + "'," + bid + "," + uid + ")", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    
+                }
             }
         }
 
@@ -201,23 +390,60 @@ namespace transactions
             {
                 // STORE HEAD
                 SqlConnection con = new SqlConnection(cs);
-                SqlCommand cmd = new SqlCommand("INSERT INTO store(doc_id,ref_doc_no,doc_type_id,doc_date,uid,remarks,b_entity_id) values(" + store_doc_id + ", " + tno + ",1,(SELECT GRDate from grn_note where grn_no=" + tno + ")," + uid + ",'REM'," + bid + ")", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO store(doc_id,ref_doc_no,doc_type_id,doc_date,uid,remarks,b_entity_id) values(" + store_doc_id + ", " + tno + ",1,(SELECT GRDate from grn_note where grn_no=" + tno + ")," + uid + ",'GRNPOST'," + bid + ")", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
                 // STORE DET
                 SqlConnection conItems = new SqlConnection(cs);
-                SqlCommand cmdItems = new SqlCommand("select iid,iqty from grn_items_det where grn_no=" + tno + "", conItems);
+                SqlCommand cmdItems = new SqlCommand("select iid,iqty,divisible_uop from grn_items_det INNER JOIN item_mast ON item_mast.id=grn_items_det.iid where grn_no=" + tno + "", conItems);
                 SqlDataReader rdrItems = null;
                 conItems.Open();
                 rdrItems = cmdItems.ExecuteReader();
                 while (rdrItems.Read() == true)
                 {
                     SqlConnection conStore = new SqlConnection(cs);
-                    SqlCommand cmdStore = new SqlCommand("INSERT INTO store_det(doc_id,iid,increase_qty,decrease_qty,whid) values(" + store_doc_id + "," + (int)rdrItems["iid"] + "," + (decimal)rdrItems["iqty"] + ",0,(select default_wh from item_mast where id=" + (int)rdrItems["iid"] + "))", conStore);
+                    SqlCommand cmdStore = new SqlCommand("INSERT INTO store_det(doc_id,iid,increase_qty,decrease_qty,whid) values(" + store_doc_id + "," + (int)rdrItems["iid"] + "," + (decimal)rdrItems["iqty"]* (decimal)rdrItems["divisible_uop"] + ",0,(select default_wh from item_mast where id=" + (int)rdrItems["iid"] + "))", conStore);
                     conStore.Open();
                     cmdStore.ExecuteNonQuery();
                     conStore.Close();
+                }
+                conItems.Close();
+            }
+        }
+
+        protected void storedecrease(int tno, string ttype, int uid, int bid)
+        {
+            store_doc_id = num.store_doc_id();
+            if (ttype == "WIPPROD")
+            {
+                // STORE HEAD
+                try
+                {
+                    SqlConnection con = new SqlConnection(cs);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO store(doc_id,ref_doc_no,doc_type_id,doc_date,uid,remarks,b_entity_id) values(" + store_doc_id + ","+wp_e.doc_id+",1006,'"+wp_e.tdate+"',"+wp_e.uid+",'"+wp_e.remarks+"',"+wp_e.b_entity_id+")", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    //con.Close();
+                }
+                // STORE DET
+                try
+                {
+                    SqlConnection conItems = new SqlConnection(cs);
+                    SqlCommand cmdItems = new SqlCommand("INSERT INTO store_det(doc_id,iid,increase_qty,decrease_qty,whid) values(" + store_doc_id + ","+wp_e.iid+",0,"+wp_e.iid_consume_qty+","+wp_e.source_whid+")", conItems);
+
+                    conItems.Open();
+                    cmdItems.ExecuteNonQuery();
+                    //while (rdrItems.Read() == true)
+                    conItems.Close();
+                }
+                catch (Exception ex)
+                {
+                    
                 }
             }
         }
@@ -284,6 +510,55 @@ namespace transactions
             cmd3.ExecuteNonQuery();
             con3.Close();
         }
+
+        public void shop_purchase_pay_account_transaction(int tno, int uid, int bid,DateTime dt,int CR_acc_id,decimal amt)
+        {
+            // CR
+            SqlConnection con2 = new SqlConnection(cs);
+            SqlCommand cmd2 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values("+CR_acc_id+",'"+dt+"',"+tno+",'PAYTOSHOP',"+amt+",0," + bid + ")", con2);
+            con2.Open();
+            cmd2.ExecuteNonQuery();
+            con2.Close();
+            // DR
+            SqlConnection con3 = new SqlConnection(cs);
+            SqlCommand cmd3 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values(13,'" + dt + "'," + tno + ",'PAYTOSHOP',0," + amt + "," + bid + ")", con3);
+            con3.Open();
+            cmd3.ExecuteNonQuery();
+            con3.Close();
+        }
+
+        public void restaurant_purchase_pay_account_transaction(int tno, int uid, int bid, DateTime dt, int CR_acc_id, decimal amt)
+        {
+            // CR
+            SqlConnection con2 = new SqlConnection(cs);
+            SqlCommand cmd2 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values(" + CR_acc_id + ",'" + dt + "'," + tno + ",'PAYTORESTAURANT'," + amt + ",0," + bid + ")", con2);
+            con2.Open();
+            cmd2.ExecuteNonQuery();
+            con2.Close();
+            // DR
+            SqlConnection con3 = new SqlConnection(cs);
+            SqlCommand cmd3 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values(13,'" + dt + "'," + tno + ",'PAYTORESTAURANT',0," + amt + "," + bid + ")", con3);
+            con3.Open();
+            cmd3.ExecuteNonQuery();
+            con3.Close();
+        }
+
+        public void fastfood_purchase_pay_account_transaction(int tno, int uid, int bid, DateTime dt, int CR_acc_id, decimal amt)
+        {
+            // CR
+            SqlConnection con2 = new SqlConnection(cs);
+            SqlCommand cmd2 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values(" + CR_acc_id + ",'" + dt + "'," + tno + ",'PAYTOFASTFOOD'," + amt + ",0," + bid + ")", con2);
+            con2.Open();
+            cmd2.ExecuteNonQuery();
+            con2.Close();
+            // DR
+            SqlConnection con3 = new SqlConnection(cs);
+            SqlCommand cmd3 = new SqlCommand("insert into account_transactions(account_id,transaction_date,ref_doc_no,description,cr,dr,b_entity_id) values(13,'" + dt + "'," + tno + ",'PAYTOFASTFOOD',0," + amt + "," + bid + ")", con3);
+            con3.Open();
+            cmd3.ExecuteNonQuery();
+            con3.Close();
+        }
+
 
         bool haveexp = false;
         protected bool haveExp(string tno)

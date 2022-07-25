@@ -19,7 +19,7 @@ namespace ESIT_ERP.Production.BOM
         postproceed.postproceed pp = new postproceed.postproceed();
         transactions.transactions vtran = new transactions.transactions();
         public int cur_actionid;
-        static int appid = 1013;
+        static int appid = 13;
         public string retmessage = "";
         protected void Page_Load(object sender, EventArgs e)
         {

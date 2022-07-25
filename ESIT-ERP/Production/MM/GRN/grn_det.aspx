@@ -73,7 +73,6 @@
                 <asp:Button runat="server" CssClass="btn btn-danger" Style="width: 100%; margin-top: 25px;" ID="btnAdd" Text="Add" OnClick="btnAdd_Click" Enabled="False" />
             </div>
     </div>
-
     <div class="container breadcrumb">
         <table class="table table-bordered" style="width: 100%;">
             <tr>
