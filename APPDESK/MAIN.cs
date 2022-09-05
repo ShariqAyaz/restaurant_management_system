@@ -102,6 +102,11 @@ namespace APPDESK
                 frmKOM frm = new frmKOM(bid,userid);
                 frm.ShowDialog();
             }
+            else if (a == 1033)
+            {
+                frmPizzaPurchases frm = new frmPizzaPurchases(bid, userid);
+                frm.ShowDialog();
+            }
             else
             {
                 MessageBox.Show("There is no application installed or implemented currently. Please contact Mr.Shahzad");

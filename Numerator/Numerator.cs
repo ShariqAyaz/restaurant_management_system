@@ -10,7 +10,7 @@ namespace Numerator
 
     public class Numerator
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         protected int grncount =0;
         protected int pincount = 0;
         protected int vpcount = 0;

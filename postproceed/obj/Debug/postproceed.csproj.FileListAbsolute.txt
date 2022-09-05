@@ -5,3 +5,10 @@ C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\post
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\obj\Debug\postproceed.csprojResolveAssemblyReference.cache
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\obj\Debug\postproceed.dll
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\postproceed\obj\Debug\postproceed.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\bin\Debug\postproceed.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\bin\Debug\postproceed.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\bin\Debug\AppLogic.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\bin\Debug\AppLogic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\obj\Debug\postproceed.csprojResolveAssemblyReference.cache
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\obj\Debug\postproceed.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\postproceed\obj\Debug\postproceed.pdb

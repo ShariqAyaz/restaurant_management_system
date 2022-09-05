@@ -22,7 +22,7 @@ namespace APPDESK
     {
         transactions.transactions vtran = new transactions.transactions();
         AppLogic.Vendor_payment vp = new AppLogic.Vendor_payment();
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         Numerator.Numerator num = new Numerator.Numerator();
         int bid, userid;
         public frmPayVendor(int get_bid, int get_userid)

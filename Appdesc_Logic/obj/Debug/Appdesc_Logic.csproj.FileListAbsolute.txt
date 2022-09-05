@@ -2,3 +2,7 @@ C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Appd
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Appdesc_Logic\bin\Debug\Appdesc_Logic.pdb
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Appdesc_Logic\obj\Debug\Appdesc_Logic.dll
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Appdesc_Logic\obj\Debug\Appdesc_Logic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Appdesc_Logic\bin\Debug\Appdesc_Logic.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Appdesc_Logic\bin\Debug\Appdesc_Logic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Appdesc_Logic\obj\Debug\Appdesc_Logic.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Appdesc_Logic\obj\Debug\Appdesc_Logic.pdb

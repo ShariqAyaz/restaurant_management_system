@@ -10,7 +10,7 @@ namespace postproceed
 {
     public class postproceed
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         public string repText;
         public bool errTrue = false;
         protected ModWarehouse appl = new ModWarehouse();

@@ -13,7 +13,7 @@ namespace DAPP
     public partial class frmVP : Form
     {
 
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         string str = "";
         public frmVP()
         {

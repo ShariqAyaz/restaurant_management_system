@@ -3,3 +3,8 @@ C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Nume
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Numerator\obj\Debug\Numerator.csprojResolveAssemblyReference.cache
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Numerator\obj\Debug\Numerator.dll
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\Numerator\obj\Debug\Numerator.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Numerator\bin\Debug\Numerator.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Numerator\bin\Debug\Numerator.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Numerator\obj\Debug\Numerator.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Numerator\obj\Debug\Numerator.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\Numerator\obj\Debug\Numerator.csprojResolveAssemblyReference.cache

@@ -3,3 +3,8 @@ C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\AppL
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\AppLogic\obj\Debug\AppLogic.csprojResolveAssemblyReference.cache
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\AppLogic\obj\Debug\AppLogic.dll
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\AppLogic\obj\Debug\AppLogic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\AppLogic\bin\Debug\AppLogic.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\AppLogic\bin\Debug\AppLogic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\AppLogic\obj\Debug\AppLogic.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\AppLogic\obj\Debug\AppLogic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\AppLogic\obj\Debug\AppLogic.csprojResolveAssemblyReference.cache

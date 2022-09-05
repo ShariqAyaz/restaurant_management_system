@@ -12,7 +12,7 @@ namespace ESIT_ERP.Production.BOM
 {
     public partial class ViewBOM : System.Web.UI.Page
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         AppLogic.LoadGRN load_grn = new AppLogic.LoadGRN();
         AppLogic.LoadGRN ins_grn = new AppLogic.LoadGRN();
         Numerator.Numerator num = new Numerator.Numerator();
@@ -78,7 +78,7 @@ namespace ESIT_ERP.Production.BOM
                 str=(string)rdr["restaurant_sale_db"];
             }
             con.Close();
-            return @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=" + str + "; integrated security=True";
+            return @"data source=LENOVO\SQLEXPRESS;initial catalog=" + str + "; integrated security=True";
         }
 
         protected void btnAdd_Click(object sender,EventArgs e)

@@ -21,9 +21,9 @@ namespace APPDESK
 {
     public partial class frmKitchenManagement : MetroForm
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True;Max Pool Size=50000";
-        protected string cs_R = @"data source=ABSERVER2\SQLEXPRESS;initial catalog=OCCOTOPOS3_RES;integrated security=True;Max Pool Size=50000";
-        protected string cs_FS = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=OCCOTOPOS3;integrated security=True;Max Pool Size=50000";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True;Max Pool Size=50000";
+        protected string cs_R = @"data source=ABSERVER\SQLEXPRESS;initial catalog=SambaPOS3_RES;integrated security=True;Max Pool Size=50000";
+        protected string cs_FS = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=SambaPOS3;integrated security=True;Max Pool Size=50000";
         private int user_id, bid;
         int st_t, end_t;
         Numerator.Numerator num = new Numerator.Numerator();

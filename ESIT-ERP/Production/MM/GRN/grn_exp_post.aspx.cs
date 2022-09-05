@@ -13,7 +13,7 @@ namespace ESIT_ERP.Production.MM.GRN
 {
     public partial class grn_exp_post : System.Web.UI.Page
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         public GRN_ITEMS[] GI = null;
         transactions.transactions GET_GI = new transactions.transactions();
         public bool loaditm = false;

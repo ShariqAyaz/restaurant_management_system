@@ -26,8 +26,8 @@ namespace APPDESK.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANWARBALOCH-PC\\SQLEXPRESS;Initial Catalog=ESITERP;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABFASTFOOD\\SQLEXPRESS;initial catalog=ESITERP;Integrated Security=Tru" +
+            "e")]
         public string ESITERPConnectionString {
             get {
                 return ((string)(this["ESITERPConnectionString"]));
@@ -37,8 +37,8 @@ namespace APPDESK.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABSERVER2\\SQLEXPRESS;Initial Catalog=OCCOTOPOS3_RES;Integrated Securi" +
-            "ty=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABSERVER\\SQLEXPRESS;initial catalog=SambaPOS3_RES;Integrated Security" +
+            "=True")]
         public string ESITERPConnectionString_REST {
             get {
                 return ((string)(this["ESITERPConnectionString_REST"]));
@@ -48,8 +48,8 @@ namespace APPDESK.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANWARBALOCH-PC\\SQLEXPRESS;Initial Catalog=OCCOTOPOS3;Integrated Secur" +
-            "ity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABFASTFOOD\\SQLEXPRESS;initial catalog=SambaPOS3;Integrated Security=T" +
+            "rue")]
         public string ESITERPConnectionString_FFPOS {
             get {
                 return ((string)(this["ESITERPConnectionString_FFPOS"]));

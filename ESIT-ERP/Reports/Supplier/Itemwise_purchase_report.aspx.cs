@@ -10,7 +10,7 @@ namespace ESIT_ERP.Reports.Supplier
 {
     public partial class Itemwise_purchase_report : System.Web.UI.Page
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         //public GRN_ITEMS[] GI = null;
         transactions.transactions GET_GI = new transactions.transactions();
         public bool loaditm = false;

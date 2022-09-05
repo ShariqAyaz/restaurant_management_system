@@ -26,8 +26,8 @@ namespace DAPP.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANWARBALOCH-PC\\SQLEXPRESS;Initial Catalog=ESITERP;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABFASTFOOD\\SQLEXPRESS;initial catalog=ESITERP;Integrated Security=Tru" +
+            "e")]
         public string ESITERPConnectionString {
             get {
                 return ((string)(this["ESITERPConnectionString"]));

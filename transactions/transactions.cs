@@ -11,7 +11,7 @@ namespace transactions
 {
     public class transactions
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         protected LoadGRN lgrn = new LoadGRN();
         protected MRN loadMRN = new MRN();
         protected GRN_ITEMS[] grnItems = null;// new GRN_ITEMS[ii];

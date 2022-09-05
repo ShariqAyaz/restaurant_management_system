@@ -5,3 +5,10 @@ C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgr
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\obj\Debug\rdgrant.csprojResolveAssemblyReference.cache
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\obj\Debug\rdgrant.dll
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\rdgrant\obj\Debug\rdgrant.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\bin\Debug\rdgrant.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\bin\Debug\rdgrant.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\bin\Debug\AppLogic.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\bin\Debug\AppLogic.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\obj\Debug\rdgrant.csprojResolveAssemblyReference.cache
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\obj\Debug\rdgrant.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\rdgrant\obj\Debug\rdgrant.pdb

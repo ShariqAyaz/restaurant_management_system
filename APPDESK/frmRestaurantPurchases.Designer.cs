@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.FFDT_RESPURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eSITERPDataSet = new APPDESK.ESITERPDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -54,15 +55,19 @@
             this.txtbAmt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.accountsTableAdapter = new APPDESK.ESITERPDataSetTableAdapters.AccountsTableAdapter();
-            this.FFDT_RESPURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fFDTRESPURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fFDT_RESPURCHASE_TA = new APPDESK.ESITERPDataSetTableAdapters.FFDT_RESPURCHASE_TA();
+            ((System.ComponentModel.ISupportInitialize)(this.FFDT_RESPURCHASEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSITERPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridACC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FFDT_RESPURCHASEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fFDTRESPURCHASEBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // FFDT_RESPURCHASEBindingSource
+            // 
+            this.FFDT_RESPURCHASEBindingSource.DataMember = "FFDT-RESPURCHASE";
+            this.FFDT_RESPURCHASEBindingSource.DataSource = this.eSITERPDataSet;
             // 
             // eSITERPDataSet
             // 
@@ -78,18 +83,20 @@
             reportDataSource1.Value = this.FFDT_RESPURCHASEBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "APPDESK.rp_Restaurant_Purchase.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(8, 116);
+            this.reportViewer1.Location = new System.Drawing.Point(11, 143);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(554, 364);
+            this.reportViewer1.Size = new System.Drawing.Size(738, 448);
             this.reportViewer1.TabIndex = 0;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(8, 80);
+            this.metroLabel1.Location = new System.Drawing.Point(11, 98);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(90, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(95, 25);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "First Ticket";
             // 
@@ -97,9 +104,10 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(233, 80);
+            this.metroLabel2.Location = new System.Drawing.Point(311, 98);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(89, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(94, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Last Ticket";
             // 
@@ -108,9 +116,10 @@
             this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(573, 335);
+            this.metroLabel3.Location = new System.Drawing.Point(764, 412);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(135, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(142, 25);
             this.metroLabel3.TabIndex = 3;
             this.metroLabel3.Text = "Production Date";
             // 
@@ -120,9 +129,10 @@
             // 
             // 
             this.txtST_T.CustomButton.Image = null;
-            this.txtST_T.CustomButton.Location = new System.Drawing.Point(93, 1);
+            this.txtST_T.CustomButton.Location = new System.Drawing.Point(171, 2);
+            this.txtST_T.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtST_T.CustomButton.Name = "";
-            this.txtST_T.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtST_T.CustomButton.Size = new System.Drawing.Size(44, 41);
             this.txtST_T.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtST_T.CustomButton.TabIndex = 1;
             this.txtST_T.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -131,7 +141,8 @@
             this.txtST_T.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtST_T.Lines = new string[] {
         "0"};
-            this.txtST_T.Location = new System.Drawing.Point(104, 79);
+            this.txtST_T.Location = new System.Drawing.Point(139, 97);
+            this.txtST_T.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtST_T.MaxLength = 32767;
             this.txtST_T.Name = "txtST_T";
             this.txtST_T.PasswordChar = '\0';
@@ -141,7 +152,7 @@
             this.txtST_T.SelectionLength = 0;
             this.txtST_T.SelectionStart = 0;
             this.txtST_T.ShortcutsEnabled = true;
-            this.txtST_T.Size = new System.Drawing.Size(123, 31);
+            this.txtST_T.Size = new System.Drawing.Size(164, 38);
             this.txtST_T.TabIndex = 4;
             this.txtST_T.Text = "0";
             this.txtST_T.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -156,9 +167,10 @@
             // 
             // 
             this.txtbEndTicket.CustomButton.Image = null;
-            this.txtbEndTicket.CustomButton.Location = new System.Drawing.Point(93, 1);
+            this.txtbEndTicket.CustomButton.Location = new System.Drawing.Point(171, 2);
+            this.txtbEndTicket.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbEndTicket.CustomButton.Name = "";
-            this.txtbEndTicket.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtbEndTicket.CustomButton.Size = new System.Drawing.Size(44, 41);
             this.txtbEndTicket.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtbEndTicket.CustomButton.TabIndex = 1;
             this.txtbEndTicket.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -167,7 +179,8 @@
             this.txtbEndTicket.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtbEndTicket.Lines = new string[] {
         "0"};
-            this.txtbEndTicket.Location = new System.Drawing.Point(328, 79);
+            this.txtbEndTicket.Location = new System.Drawing.Point(437, 97);
+            this.txtbEndTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbEndTicket.MaxLength = 32767;
             this.txtbEndTicket.Name = "txtbEndTicket";
             this.txtbEndTicket.PasswordChar = '\0';
@@ -177,7 +190,7 @@
             this.txtbEndTicket.SelectionLength = 0;
             this.txtbEndTicket.SelectionStart = 0;
             this.txtbEndTicket.ShortcutsEnabled = true;
-            this.txtbEndTicket.Size = new System.Drawing.Size(123, 31);
+            this.txtbEndTicket.Size = new System.Drawing.Size(164, 38);
             this.txtbEndTicket.TabIndex = 5;
             this.txtbEndTicket.Text = "0";
             this.txtbEndTicket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -193,9 +206,10 @@
             this.btnTransfer.Enabled = false;
             this.btnTransfer.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnTransfer.ForeColor = System.Drawing.Color.White;
-            this.btnTransfer.Location = new System.Drawing.Point(573, 373);
+            this.btnTransfer.Location = new System.Drawing.Point(764, 459);
+            this.btnTransfer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(352, 59);
+            this.btnTransfer.Size = new System.Drawing.Size(469, 73);
             this.btnTransfer.Style = MetroFramework.MetroColorStyle.Red;
             this.btnTransfer.TabIndex = 25;
             this.btnTransfer.Text = "SETTLE";
@@ -207,19 +221,21 @@
             // dtpPdate
             // 
             this.dtpPdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpPdate.Location = new System.Drawing.Point(718, 338);
-            this.dtpPdate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpPdate.Location = new System.Drawing.Point(957, 416);
+            this.dtpPdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpPdate.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtpPdate.Name = "dtpPdate";
-            this.dtpPdate.Size = new System.Drawing.Size(207, 29);
+            this.dtpPdate.Size = new System.Drawing.Size(275, 30);
             this.dtpPdate.TabIndex = 26;
             // 
             // btnFetchData
             // 
             this.btnFetchData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnFetchData.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnFetchData.Location = new System.Drawing.Point(573, 54);
+            this.btnFetchData.Location = new System.Drawing.Point(764, 66);
+            this.btnFetchData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFetchData.Name = "btnFetchData";
-            this.btnFetchData.Size = new System.Drawing.Size(352, 59);
+            this.btnFetchData.Size = new System.Drawing.Size(469, 73);
             this.btnFetchData.Style = MetroFramework.MetroColorStyle.Green;
             this.btnFetchData.TabIndex = 27;
             this.btnFetchData.Text = "FETCH DATA";
@@ -232,9 +248,10 @@
             this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButton2.BackColor = System.Drawing.Color.Red;
             this.metroButton2.ForeColor = System.Drawing.Color.White;
-            this.metroButton2.Location = new System.Drawing.Point(573, 433);
+            this.metroButton2.Location = new System.Drawing.Point(764, 533);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(352, 47);
+            this.metroButton2.Size = new System.Drawing.Size(469, 58);
             this.metroButton2.Style = MetroFramework.MetroColorStyle.Red;
             this.metroButton2.TabIndex = 28;
             this.metroButton2.Text = "CLOSE";
@@ -279,7 +296,8 @@
             this.gridACC.EnableHeadersVisualStyles = false;
             this.gridACC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridACC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridACC.Location = new System.Drawing.Point(573, 165);
+            this.gridACC.Location = new System.Drawing.Point(764, 203);
+            this.gridACC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridACC.Name = "gridACC";
             this.gridACC.ReadOnly = true;
             this.gridACC.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -291,9 +309,10 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridACC.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridACC.RowHeadersWidth = 51;
             this.gridACC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridACC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridACC.Size = new System.Drawing.Size(352, 130);
+            this.gridACC.Size = new System.Drawing.Size(469, 160);
             this.gridACC.TabIndex = 30;
             this.gridACC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridACC_CellClick);
             // 
@@ -301,6 +320,7 @@
             // 
             this.id_acc.DataPropertyName = "id";
             this.id_acc.HeaderText = "id";
+            this.id_acc.MinimumWidth = 6;
             this.id_acc.Name = "id_acc";
             this.id_acc.ReadOnly = true;
             this.id_acc.Width = 50;
@@ -309,6 +329,7 @@
             // 
             this.accountnameDataGridViewTextBoxColumn.DataPropertyName = "Account_name";
             this.accountnameDataGridViewTextBoxColumn.HeaderText = "Account_name";
+            this.accountnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.accountnameDataGridViewTextBoxColumn.Name = "accountnameDataGridViewTextBoxColumn";
             this.accountnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.accountnameDataGridViewTextBoxColumn.Width = 200;
@@ -325,9 +346,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(569, 145);
+            this.label1.Location = new System.Drawing.Point(759, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 19);
+            this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 29;
             this.label1.Text = "SELECT ACCOUNT";
             // 
@@ -338,9 +360,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 18F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(568, 116);
+            this.label2.Location = new System.Drawing.Point(757, 143);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 29);
+            this.label2.Size = new System.Drawing.Size(247, 37);
             this.label2.TabIndex = 31;
             this.label2.Text = "SETTLE AND RESET";
             // 
@@ -351,9 +374,10 @@
             // 
             // 
             this.txtbAmt.CustomButton.Image = null;
-            this.txtbAmt.CustomButton.Location = new System.Drawing.Point(177, 1);
+            this.txtbAmt.CustomButton.Location = new System.Drawing.Point(320, 2);
+            this.txtbAmt.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbAmt.CustomButton.Name = "";
-            this.txtbAmt.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtbAmt.CustomButton.Size = new System.Drawing.Size(44, 41);
             this.txtbAmt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtbAmt.CustomButton.TabIndex = 1;
             this.txtbAmt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -363,7 +387,8 @@
             this.txtbAmt.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txtbAmt.Lines = new string[] {
         "0"};
-            this.txtbAmt.Location = new System.Drawing.Point(718, 301);
+            this.txtbAmt.Location = new System.Drawing.Point(957, 370);
+            this.txtbAmt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbAmt.MaxLength = 32767;
             this.txtbAmt.Name = "txtbAmt";
             this.txtbAmt.PasswordChar = '\0';
@@ -372,7 +397,7 @@
             this.txtbAmt.SelectionLength = 0;
             this.txtbAmt.SelectionStart = 0;
             this.txtbAmt.ShortcutsEnabled = true;
-            this.txtbAmt.Size = new System.Drawing.Size(207, 31);
+            this.txtbAmt.Size = new System.Drawing.Size(276, 38);
             this.txtbAmt.TabIndex = 32;
             this.txtbAmt.Text = "0";
             this.txtbAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -385,20 +410,16 @@
             this.metroLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(573, 304);
+            this.metroLabel4.Location = new System.Drawing.Point(764, 374);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(110, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(115, 25);
             this.metroLabel4.TabIndex = 33;
             this.metroLabel4.Text = "Paid Amount";
             // 
             // accountsTableAdapter
             // 
             this.accountsTableAdapter.ClearBeforeFill = true;
-            // 
-            // FFDT_RESPURCHASEBindingSource
-            // 
-            this.FFDT_RESPURCHASEBindingSource.DataMember = "FFDT-RESPURCHASE";
-            this.FFDT_RESPURCHASEBindingSource.DataSource = this.eSITERPDataSet;
             // 
             // fFDTRESPURCHASEBindingSource
             // 
@@ -411,9 +432,9 @@
             // 
             // frmRestaurantPurchases
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 503);
+            this.ClientSize = new System.Drawing.Size(1257, 619);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.txtbAmt);
             this.Controls.Add(this.label2);
@@ -429,15 +450,17 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRestaurantPurchases";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "RESTAURANT PURCHASES";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.frmShopSale_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FFDT_RESPURCHASEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSITERPDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridACC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FFDT_RESPURCHASEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fFDTRESPURCHASEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

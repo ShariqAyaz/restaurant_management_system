@@ -11,3 +11,13 @@ C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOB
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.csprojResolveAssemblyReference.cache
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\bin\Debug\Zen.Barcode.Core.dll
 C:\Users\Shariq\Documents\Visual Studio 2015\Projects\Running-Proj\ESIT-ERP\PJOBS\obj\Debug\PJOBS.frmJOB.resources
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\bin\Debug\PJOBS.exe.config
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\bin\Debug\PJOBS.exe
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\bin\Debug\PJOBS.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\obj\Debug\PJOBS.frmJOB.resources
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\obj\Debug\PJOBS.Properties.Resources.resources
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\obj\Debug\PJOBS.csproj.GenerateResource.cache
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\obj\Debug\PJOBS.exe
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\obj\Debug\PJOBS.pdb
+C:\Users\abasi\Desktop\Restaurant ESIT ERP\restaurant_management_system\PJOBS\obj\Debug\PJOBS.csprojResolveAssemblyReference.cache

@@ -11,7 +11,7 @@ namespace rdgrant
 {
     public class rdgrant
     {
-        protected string cs = @"data source=ANWARBALOCH-PC\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
+        protected string cs = @"data source=ABFASTFOOD\SQLEXPRESS;initial catalog=ESITERP;integrated security=True";
         protected bool validuser = false;
         
         public bool userlogin(AuthUser usr)
