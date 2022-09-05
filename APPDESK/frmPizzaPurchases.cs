@@ -134,7 +134,7 @@ namespace APPDESK
                 try
                 {
                     SqlConnection conUPD = new SqlConnection(cs);
-                    SqlCommand cmdUPD = new SqlCommand("update numerator set RESTAURANT_PURCHASE=" + (end_t + 1), conUPD);
+                    SqlCommand cmdUPD = new SqlCommand("update numerator set PIZZA_PURCHASE=" + (end_t + 1), conUPD);
                     conUPD.Open();
                     cmdUPD.ExecuteNonQuery();
                     conUPD.Close();
