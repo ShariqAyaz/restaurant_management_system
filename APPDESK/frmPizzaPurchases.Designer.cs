@@ -407,7 +407,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "APPDESK.rp_Restaurant_Purchase.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(8, 121);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
+            //this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(545, 359);
             this.reportViewer1.TabIndex = 34;
             // 
